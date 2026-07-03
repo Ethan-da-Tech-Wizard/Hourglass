@@ -12,10 +12,14 @@ prior-art survey, founding ADRs, worked example. This phase produced everything 
 [docs/](../README.md).
 
 **Exit gate:** a competent engineer can read the docs cold and describe every subsystem's
-responsibility and interface without asking questions. Open items before the gate:
-- Grain canonical-serialization spec (hash stability — [ADR-0001](../ADR/ADR-0001-atomic-grains.md#consequences))
-- Storage interface definition ([ADR-0004](../ADR/ADR-0004-sqlite-first-storage.md#consequences))
-- Rule concrete syntax ([rule-system.md](../Reasoning/rule-system.md#future-work))
+responsibility and interface without asking questions. The formerly-open items are now written
+as normative specs: [grain serialization](../Specifications/grain-serialization.md),
+[storage interface](../Specifications/storage-interface.md),
+[rule syntax](../Specifications/rule-syntax.md),
+[answer envelope](../Specifications/answer-envelope.md) — plus the
+[v1 scope freeze](../Specifications/v1-scope.md) and the
+[requirements traceability matrix](../Specifications/requirements-traceability.md), which is
+reviewed at this and every later gate. Remaining before the gate: the cold-read review itself.
 
 ## Phase 1 — Grain store
 

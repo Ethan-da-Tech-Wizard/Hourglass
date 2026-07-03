@@ -26,8 +26,11 @@ Design points:
   ids break when knowledge changes (Pluto). Labels and descriptions are data, not identity.
   Wikidata's Q-numbers demonstrate this works at 100M+ entity scale.
 - **Merges are recorded, not destructive.** When two entities are found to be the same, one
-  becomes `merged-into` the other; grains are re-pointed, but the merge event and both prior
-  ids are kept so any historical proof can be replayed.
+  becomes `merged-into` the other. Affected grains are **superseded, never edited in place**:
+  new grains with the surviving id are admitted (provenance carried over) and the old ones get
+  status `superseded` — because grain ids are content hashes, re-pointing in place would change
+  their identity and orphan provenance and audit history. Decision and full reasoning:
+  [ADR-0006](../ADR/ADR-0006-entity-merge-supersession.md).
 - **Classes are entities too.** `Mammal`, `Planet` are entities of kind `class`, connected by
   `SUBCLASS_OF`, so the rule system needs no separate type machinery.
 

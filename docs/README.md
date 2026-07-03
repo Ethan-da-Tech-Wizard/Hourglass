@@ -15,6 +15,7 @@ engineering question. If a document stops answering one, delete it.
 | [Security/](Security/) | Integrity, tamper detection, malicious knowledge injection |
 | [Performance/](Performance/) | Indexing, caching, incremental update research |
 | [Examples/](Examples/) | End-to-end worked examples on concrete knowledge bases |
+| [Specifications/](Specifications/) | **Normative** contracts: exact byte formats, interfaces, scope freeze, traceability matrix |
 | [RFC/](RFC/) | Requests for comment: proposals that change the knowledge model or vocabulary |
 | [ADR/](ADR/) | Architectural decision records: decisions already made, with reasoning |
 | [Glossary/](Glossary/) | The project vocabulary, one definition per term |
@@ -33,6 +34,8 @@ engineering question. If a document stops answering one, delete it.
 5. [Worked example](Examples/worked-example.md) — everything above applied to a small concrete
    knowledge base.
 6. [ADR index](ADR/README.md) — why the design is the way it is.
+7. [Specifications](Specifications/README.md) — the normative contracts implementation codes
+   against; read [v1-scope.md](Specifications/v1-scope.md) before proposing anything new.
 
 ## Documentation standards
 

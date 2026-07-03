@@ -18,3 +18,4 @@ in [RFC/](../RFC/README.md); an accepted RFC that decides something produces an 
 | [0003](ADR-0003-unknown-over-guessing.md) | No confidence scores in the answer path; refusal is a correct output | Accepted |
 | [0004](ADR-0004-sqlite-first-storage.md) | SQLite + content-addressed archive as the initial storage engine | Accepted |
 | [0005](ADR-0005-datalog-style-rules.md) | The rule language is Datalog (no function symbols, no negation, range-restricted) | Accepted |
+| [0006](ADR-0006-entity-merge-supersession.md) | Entity merges supersede grains; no stored record is ever modified in place | Accepted |

@@ -46,6 +46,7 @@ The architecture is being documented before any implementation begins. See the
 | [Prior art](docs/Research/prior-art.md) | What existing fields we borrow from, and what we reject |
 | [Worked example](docs/Examples/worked-example.md) | The whole pipeline on a small concrete knowledge base |
 | [ADR index](docs/ADR/README.md) | Every significant engineering decision, with reasoning |
+| [Specifications](docs/Specifications/README.md) | The normative contracts code will be built against — byte formats, interfaces, frozen v1 scope, requirements traceability |
 
 The full documentation map is in [docs/README.md](docs/README.md).
 
