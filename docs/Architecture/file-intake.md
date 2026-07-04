@@ -46,7 +46,10 @@ PDF → text layer, XLSX sheet → TSV table, HTML → cleaned text + tables. Ru
 1. Renditions are hashed like everything else and recorded as
    `(source id, converter id@version) → rendition hash`. Same converter version + same
    original ⇒ same rendition bytes, reproducibly — converters MUST be deterministic (a
-   converter with nondeterministic output is rejected at review).
+   converter with nondeterministic output is rejected at review). Each converter also emits a
+   **location map** (rendition offsets → positions in the original: page/bbox, sheet/cell,
+   element path) under the same rules — it is what lets the
+   [evidence viewer](evidence-viewer.md) draw highlight boxes on the original document.
 2. **Evidence offsets point into the rendition**, and the provenance entry names which one
    ([per-grain provenance](../Knowledge_Model/provenance.md#per-grain-provenance-entry) gains a
    `rendition` field alongside `extraction method`). The chain a human can walk:
@@ -68,13 +71,45 @@ PDF → text layer, XLSX sheet → TSV table, HTML → cleaned text + tables. Ru
 | XLSX / ODS | sheet → TSV per sheet; formulas stored as *values + formula text* (the value is what the source asserted; the formula is context) | 1–2 | deterministic |
 | JSON / XML / API dumps | pretty-printed normal form | 1 | deterministic |
 | HTML | boilerplate-stripped text + extracted tables | 2 | deterministic |
-| PDF (born-digital) | embedded text layer + per-page offsets | 2–3 | deterministic |
+| DOCX / ODT | unzip + XML text extraction with element-path offsets; embedded tables → TSV renditions | 2–3 | deterministic |
+| TXT / Markdown | passthrough text (line/column location map) | 3 | deterministic |
+| PDF (born-digital) | embedded text layer + per-page offsets and bounding boxes | 2–3 | deterministic |
 | PDF (scanned) / images | **OCR** — see Vision below | — | **probabilistic: v1, contained (quarantine-only)** |
 | Audio / video | out of scope entirely; not on any roadmap | — | — |
 
 An unrecognized format still archives fine (the snapshot layer is format-blind); it simply has
 no converter, so it yields no candidates until one exists. Storage never blocks on
-understanding.
+understanding. "All other file types" is therefore already handled in the only honest way:
+**every file type can be archived today; a file type yields knowledge when its deterministic
+converter exists**, and the converter list grows one small, reviewable piece at a time —
+per-format converters are each trivial, which is why this beats one clever universal reader
+(see Rejected alternatives).
+
+## Selecting what to ingest: check all, or check some
+
+Intake is a two-step scan-then-ingest flow so the user always chooses:
+
+```
+hourglass scan <dir|files>      # step 1: look, don't touch
+  → prints a manifest: every discovered file with format, size, converter that would run,
+    and status (new / already archived / no converter yet)
+  → writes it to intake-manifest.txt — one line per file, all lines checked [x] by default
+
+hourglass ingest --manifest intake-manifest.txt   # step 2: ingest what's checked
+hourglass ingest --all <dir>                      # or skip review: check-all shortcut
+hourglass ingest <file> [<file>…]                 # or name files directly: check-selected
+```
+
+The manifest is a plain text file — uncheck a line (`[x]` → `[ ]`) to skip it. KISS on purpose:
+a text file the user edits with any editor is reviewable, diffable, scriptable, and attachable
+to a PR, and it costs nothing to build compared to an interactive picker (which can layer on
+later as sugar that *writes* the same manifest). Two properties make selection stress-free:
+
+- **Over-selecting is harmless.** Content-hash dedup means re-ingesting an already-archived
+  file is a no-op, and duplicate facts merge into corroboration
+  ([bulk intake](#bulk-intake)).
+- **Selection is recorded.** The ingest run logs which manifest (by hash) drove it — so "why is
+  this file in the KB?" has an answer in the audit trail like everything else.
 
 ## Vision / OCR: the honest KISS answer
 

@@ -107,12 +107,15 @@ Derived from the [roadmap](docs/Roadmap/roadmap.md) (phases and gates) and the
 - [ ] P5.4 Tier-3 pattern extractors: copular definitions, Hearst patterns, date/quantity normalizers
 - [ ] P5.5 Extractor conformance suite: per-pattern corpus with expected grains; extractor version recorded in provenance
 - [ ] P5.6 Recall-by-toolchain drill: break an extractor, enumerate and re-verify everything it produced (REQ-15)
-- [ ] P5.7 ⛩ **Phase 5 gate** (human): real source → snapshot → candidates → verified grains → provable answers, fully traced; REQ-15 green — *also requires P5.8–P5.12 below (added pre-freeze 2026-07-04, after this gate item was numbered)*
+- [ ] P5.7 ⛩ **Phase 5 gate** (human): real source → snapshot → candidates → verified grains → provable answers, fully traced; REQ-15 green — *also requires P5.8–P5.15 below (added pre-freeze 2026-07-04, after this gate item was numbered)*
 - [ ] P5.8 Rendition/converter framework: deterministic converters (CSV, XLSX→TSV, JSON, HTML, born-digital PDF), hashed rebuildable renditions, trusted/untrusted flag, rendition field in provenance ([file-intake.md](docs/Architecture/file-intake.md))
 - [ ] P5.9 Intake CLI: `ingest <file|url>` → archived snapshot, renditions run, quarantine report
 - [ ] P5.10 Bulk intake: directory/batch ingestion, idempotent re-runs via content hash, per-format (not per-file) schema mappings, parallel conversion workers feeding the single admission point ([file-intake.md bulk intake](docs/Architecture/file-intake.md#bulk-intake))
 - [ ] P5.11 OCR converter (contained): one OCR tool wrapped as an untrusted converter; renditions feed quarantine only; OCR-internal confidence dies at the converter boundary ([RFC-0001](docs/RFC/RFC-0001-confidence-thresholded-answering.md))
-- [ ] P5.12 OCR confirmation flow in curator CLI: side-by-side page image vs. excerpt, confirm/reject recorded in status log; corroboration path as the non-human alternative
+- [ ] P5.12 OCR confirmation flow in curator CLI: side-by-side page image vs. excerpt, confirm/reject recorded in status log; corroboration path as the non-human alternative (reuses the P5.14 evidence viewer)
+- [ ] P5.13 Location maps: every converter emits offset→position maps (sheet/cell, page/bbox, element path, line/col); DOCX/ODT and TXT/Markdown converters added ([evidence-viewer.md](docs/Architecture/evidence-viewer.md#location-maps-the-one-new-artifact))
+- [ ] P5.14 Evidence viewer: `show <grain-id>` and `--evidence` on queries → self-contained static HTML, deterministic colored highlights per source on the original document view, CLI text fallback; round-trip test = REQ-08 acceptance
+- [ ] P5.15 Scan-then-ingest selection: `scan` writes a plain-text check-all manifest, `ingest --manifest` honors unchecked lines, `--all` and direct-file shortcuts; manifest hash recorded in the ingest audit log ([file-intake.md](docs/Architecture/file-intake.md#selecting-what-to-ingest-check-all-or-check-some))
 
 ## Phase 6 — Scale and hardening
 

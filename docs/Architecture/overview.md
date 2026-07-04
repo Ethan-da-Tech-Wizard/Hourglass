@@ -146,7 +146,8 @@ Dependency rules:
 ## Related documents
 
 - The module/repository shape implementing this: [codebase-layout.md](codebase-layout.md)
-- Where uploaded files (PDF, Excel, any format) physically live: [file-intake.md](file-intake.md)
+- Where uploaded files (PDF, Excel, Word, any format) physically live: [file-intake.md](file-intake.md)
+- Showing users where each fact came from (highlights on originals): [evidence-viewer.md](evidence-viewer.md)
 - Decisions: [ADR-0001 atomic grains](../ADR/ADR-0001-atomic-grains.md),
   [ADR-0002 closed relationship vocabulary](../ADR/ADR-0002-closed-relationship-vocabulary.md),
   [ADR-0003 unknown over guessing](../ADR/ADR-0003-unknown-over-guessing.md),

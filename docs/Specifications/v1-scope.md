@@ -45,8 +45,13 @@ structured-source ingesters, template extractors, deterministic pattern extracto
 queue, extractor conformance suite, and the file-intake layer — content-addressed snapshot
 archive plus the rendition/converter framework with its trusted/untrusted flag
 ([file-intake.md](../Architecture/file-intake.md)). Deterministic converters:
-CSV/XLSX/JSON/HTML/born-digital PDF, including **bulk/batch spreadsheet intake** (idempotent by
-content hash). One contained probabilistic converter: **OCR** for scanned documents — untrusted
+CSV/XLSX/JSON/HTML/DOCX/ODT/TXT/Markdown/born-digital PDF — each emitting a **location map**
+for evidence highlighting — including **bulk/batch intake** (idempotent by content hash) and
+**scan-then-ingest selection** (check-all or check-selected via plain-text manifest). Also IN:
+the **evidence viewer** — `show <grain-id>` renders the original document with deterministic
+colored highlight boxes on the exact cells/spans/regions each fact came from, per source
+([evidence-viewer.md](../Architecture/evidence-viewer.md)); generated static HTML only, which
+stays within the "no web UI" line (no server, no session). One contained probabilistic converter: **OCR** for scanned documents — untrusted
 renditions feeding quarantine only; admission requires human confirmation against the page
 image or independent corroboration; OCR-internal confidence never leaves the converter
 (amended IN 2026-07-04, pre-freeze, owner decision; containment per

@@ -39,7 +39,10 @@ Hourglass/
 │   ├── conflict/              # constraint checks, dispute lifecycle, conflict records
 │   ├── acquire/               # ingesters (tier 1–3), converters/renditions, quarantine
 │   ├── render/                # proof → text. Depends on envelope ONLY
-│   └── cli/                   # curator + query commands; the only composition root
+│   ├── view/                  # evidence viewer: highlights on originals (evidence-viewer.md);
+│   │                          #   read-only leaf — nothing imports it except cli
+│   └── cli/                   # curator + query + scan/ingest/show commands; the only
+│                              #   composition root
 │
 ├── tests/                     # unit/integration tests beyond the conformance suites
 │
@@ -73,6 +76,7 @@ flowchart TD
     CONFL[conflict]
     ACQ[acquire<br/><i>ingesters, quarantine</i>]
     REND[render]
+    VIEW[view<br/><i>evidence viewer</i>]
     CLI[cli<br/><i>composition root</i>]
 
     ENV --> CORE
@@ -93,10 +97,13 @@ flowchart TD
     ACQ --> KNOW
     ACQ --> ARCH
     REND --> ENV
+    VIEW --> STORE
+    VIEW --> ARCH
     CLI --> ACQ
     CLI --> PROVE
     CLI --> VERIFY
     CLI --> REND
+    CLI --> VIEW
     CLI --> CONFL
 ```
 
@@ -116,6 +123,9 @@ flowchart TD
    never prove or answer. The untrusted/trusted boundary from
    [parsing.md](../Research/parsing.md#framing-that-changes-the-problem-output-is-candidates)
    is a missing arrow, not a guideline.
+5. **`view` is a read-only leaf.** It reads ReadStore + archive to draw evidence highlights
+   ([evidence-viewer.md](evidence-viewer.md)); nothing imports it except `cli`, so display can
+   never influence proving, admission, or rendering.
 
 ## Write path / read path, mapped onto modules
 
@@ -147,7 +157,7 @@ Where things sit at runtime — one table, no exceptions:
 | Data | Lives in | Rebuildable? |
 |---|---|---|
 | Uploaded originals (PDF, XLSX, anything) | `archive/` content-addressed tree | No — this is ground truth ([file-intake.md](file-intake.md)) |
-| Derived text/tables from those files | `renditions/` | Yes — from originals + converter version |
+| Derived text/tables/location maps from those files | `renditions/` | Yes — from originals + converter version |
 | Grains, entities, rules, provenance, status log | `kb.sqlite` | No — this is the knowledge |
 | Proof cache, materialized closures | cache store | Yes — losing it loses nothing |
 | Vocabulary + conformance fixtures | git (this repo) | Versioned like code |
