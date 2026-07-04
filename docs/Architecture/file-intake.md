@@ -69,7 +69,7 @@ PDF → text layer, XLSX sheet → TSV table, HTML → cleaned text + tables. Ru
 | JSON / XML / API dumps | pretty-printed normal form | 1 | deterministic |
 | HTML | boilerplate-stripped text + extracted tables | 2 | deterministic |
 | PDF (born-digital) | embedded text layer + per-page offsets | 2–3 | deterministic |
-| PDF (scanned) / images | **OCR** — see Vision below | — | **probabilistic: v2, contained** |
+| PDF (scanned) / images | **OCR** — see Vision below | — | **probabilistic: v1, contained (quarantine-only)** |
 | Audio / video | out of scope entirely; not on any roadmap | — | — |
 
 An unrecognized format still archives fine (the snapshot layer is format-blind); it simply has
@@ -98,12 +98,31 @@ therefore applies at the *converter* layer, one layer below where we first wrote
 3. Provenance stays intact either way: the archived snapshot is the *image*; the excerpt
    offsets live in the OCR rendition; the human check is recorded like any verification.
 
-**What v1 actually builds is the socket, not the appliance:** the rendition layer with its
-trusted/untrusted flag (checklist P5.8). Adding OCR later is then: wrap one OCR tool as a
-converter, mark it untrusted, done — no schema change, no new pipeline, no redesign. Zero
-complexity carried until scanned sources actually show up in your intake; zero rework when they
-do. That is the KISS-but-OP trade, made deliberately. Parked on the
-[v1 OUT list](../Specifications/v1-scope.md#out--explicitly-not-in-v1).
+**Scope decision (amended 2026-07-04, pre-freeze, owner decision):** OCR ships **in v1**, under
+exactly the containment above. The build order stays socket-first: the rendition layer with its
+trusted/untrusted flag (checklist P5.8) lands before the OCR converter (P5.11) and the
+side-by-side confirmation flow in the curator CLI (P5.12). The containment terms are not
+adjustable at implementation time — OCR-derived grains reach `verified` only through human
+confirmation or independent corroboration, per
+[RFC-0001](../RFC/RFC-0001-confidence-thresholded-answering.md); any loosening is a new RFC.
+
+## Bulk intake
+
+"A massive amount of spreadsheets" is the intended happy path, and the design absorbs it
+without new machinery:
+
+- **Idempotent by construction.** Sources are content-addressed, so re-ingesting a directory
+  costs one hash per file; unchanged files short-circuit, changed files become new source
+  versions. Point the intake at the same folder nightly and only novelty does work.
+- **Grain-level dedup does the rest.** A thousand sheets repeating the same fact converge on
+  one grain with a thousand provenance entries — corroboration accumulating for free
+  ([grains.md](../Knowledge_Model/grains.md#what-a-grain-is)).
+- **Throughput lives on the write path**, which is allowed to be slow-and-checked
+  ([performance.md](../Performance/performance.md#workload-shape)): parallel conversion and
+  extraction workers, one serialized admission point. The `grains/sec admitted` metric (P6.2)
+  is the number to watch; nothing about bulk load touches the read path or determinism.
+- One schema mapping per spreadsheet *format* (not per file): map "column B is POPULATION"
+  once, apply it to every file that matches the format (P5.10).
 
 ## "Training data" — what it means here
 

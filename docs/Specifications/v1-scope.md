@@ -44,8 +44,14 @@ Freeze point: this document freezes when Phase 1 implementation starts
 structured-source ingesters, template extractors, deterministic pattern extractors, quarantine
 queue, extractor conformance suite, and the file-intake layer — content-addressed snapshot
 archive plus the rendition/converter framework with its trusted/untrusted flag
-([file-intake.md](../Architecture/file-intake.md)). v1 converters are deterministic only
-(CSV/XLSX/JSON/HTML/born-digital PDF).
+([file-intake.md](../Architecture/file-intake.md)). Deterministic converters:
+CSV/XLSX/JSON/HTML/born-digital PDF, including **bulk/batch spreadsheet intake** (idempotent by
+content hash). One contained probabilistic converter: **OCR** for scanned documents — untrusted
+renditions feeding quarantine only; admission requires human confirmation against the page
+image or independent corroboration; OCR-internal confidence never leaves the converter
+(amended IN 2026-07-04, pre-freeze, owner decision; containment per
+[file-intake.md](../Architecture/file-intake.md#vision--ocr-the-honest-kiss-answer) and
+[RFC-0001](../RFC/RFC-0001-confidence-thresholded-answering.md)).
 
 **Hardening (Phase 6)**
 - Proof cache with exact invalidation; benchmark KB + CI regression gates; integrity audit job;
@@ -60,7 +66,7 @@ Each item is out *by decision*, with the doc that parks it:
 | Negative grains; any negation in rules | [rule-system.md](../Reasoning/rule-system.md#negation) |
 | Arithmetic, aggregation, or built-ins in rules | [ADR-0005](../ADR/ADR-0005-datalog-style-rules.md#tradeoffs) |
 | Tier-4 prose extraction; any statistical extractor | [parsing.md](../Research/parsing.md#where-probabilistic-methods-may-be-required--and-the-containment-rule) |
-| OCR / vision converters (the untrusted-rendition socket ships in v1; the OCR appliance is v2) | [file-intake.md](../Architecture/file-intake.md#vision--ocr-the-honest-kiss-answer) |
+| ~~OCR / vision converters (the untrusted-rendition socket ships in v1; the OCR appliance is v2)~~ — moved to IN 2026-07-04, pre-freeze, owner decision; OCR ships in v1 under containment (quarantine-only, human confirm or corroboration) | [file-intake.md](../Architecture/file-intake.md#vision--ocr-the-honest-kiss-answer) |
 | Audio/video ingestion; general multimodal interpretation ("describe this image") | [file-intake.md](../Architecture/file-intake.md#per-format-plan) — the latter is out of philosophy, not just out of scope |
 | Natural-language *questions* — v1 queries are structured goal patterns only | [answer-envelope.md](answer-envelope.md#query) |
 | Multi-writer / distributed storage; PostgreSQL migration | [storage-research.md](../Storage/storage-research.md#revisit-triggers-written-down-now-on-purpose) |

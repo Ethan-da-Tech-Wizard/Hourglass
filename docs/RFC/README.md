@@ -37,4 +37,4 @@ explicitly tracked in ADR-0002's tradeoffs.
 
 | RFC | Title | Status |
 |---|---|---|
-| — | *(none yet — the seed vocabulary and founding decisions shipped with the initial design as ADRs 0001–0005)* | |
+| [0001](RFC-0001-confidence-thresholded-answering.md) | Confidence-thresholded answering | Rejected |
