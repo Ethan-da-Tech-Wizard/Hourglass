@@ -1,7 +1,9 @@
 # Hourglass documentation map
 
 This repository is the engineering notebook for Hourglass. Every document exists to answer a real
-engineering question. If a document stops answering one, delete it.
+engineering question. If a document stops answering one, it is marked superseded with a pointer
+to its replacement — never deleted (see the
+[documentation preservation policy](#documentation-preservation-policy) below).
 
 ## Directory layout
 
@@ -57,6 +59,31 @@ Rules of the notebook:
 - Every document links to the documents it depends on and the ADRs it motivates.
 - The [glossary](Glossary/README.md) is the single source of truth for terminology. New terms are
   added there before being used elsewhere.
+
+## Documentation preservation policy
+
+The notebook obeys the same law as the knowledge base it describes: **history is never erased.**
+Grains are never edited or deleted, only status-changed
+([ADR-0001](ADR/ADR-0001-atomic-grains.md), [ADR-0006](ADR/ADR-0006-entity-merge-supersession.md));
+documentation gets the identical treatment.
+
+1. **No document is ever deleted.** Not ADRs, not RFCs (including rejected ones), not checklist
+   items, not glossary terms, not design docs. A document that no longer reflects the design is
+   *superseded*, not removed.
+2. **Decision records are append-only.** An accepted ADR or closed RFC is never edited beyond
+   status annotations (`Superseded by ADR-NNNN`). Reversing a decision means writing a new ADR
+   that names and supersedes the old one — the old reasoning remains readable forever, because
+   knowing *why we used to think otherwise* is knowledge.
+3. **Explanatory docs evolve by reviewed correction and extension**, with git history as the
+   full audit trail. A superseded section gets an explicit note pointing to its replacement — a
+   silent rewrite that makes an old decision look like it never happened is the documentation
+   equivalent of silently overwriting a grain, and is treated as a defect in review.
+4. **The [master checklist](../CHECKLIST.md) is append-only**: items are checked off with date
+   and commit, or struck through with a superseding reference — never removed, reordered, or
+   renumbered.
+5. **Working agents are bound to this policy** by the repository-root
+   [CLAUDE.md](../CLAUDE.md), which every agent session loads. Any PR that deletes a
+   documentation file fails review on that ground alone.
 
 ## ADR vs RFC
 

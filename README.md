@@ -31,7 +31,11 @@ not present in the verified proof.
 
 **Phase 0 — Design and research.** This repository is the engineering notebook for the project.
 The architecture is being documented before any implementation begins. See the
-[roadmap](docs/Roadmap/roadmap.md).
+[roadmap](docs/Roadmap/roadmap.md) for the phased plan and **[CHECKLIST.md](CHECKLIST.md)** for
+the live, check-off-as-you-go progression list that every working session updates. Contributor
+and agent working rules live in [CLAUDE.md](CLAUDE.md); all documentation is governed by the
+[preservation policy](docs/README.md#documentation-preservation-policy) — nothing is ever
+deleted or silently rewritten.
 
 ## Where to start reading
 

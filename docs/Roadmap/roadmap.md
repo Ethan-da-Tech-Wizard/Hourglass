@@ -5,6 +5,11 @@ exit gate; a phase is done when its gate holds, not when its time is up. Phases 
 bottom-up: each one delivers something testable on its own, and nothing depends on a later
 phase's magic.
 
+This document explains the phases and their gates; the **live execution state** — itemized
+tasks, check-offs with dates and commits, gate sign-offs — lives in
+[CHECKLIST.md](../../CHECKLIST.md) at the repository root and is updated in the same commit as
+the work it records.
+
 ## Phase 0 — Design and research *(current)*
 
 The engineering notebook: architecture, knowledge model, reasoning design, storage decision,
