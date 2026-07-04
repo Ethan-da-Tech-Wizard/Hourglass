@@ -107,7 +107,9 @@ Derived from the [roadmap](docs/Roadmap/roadmap.md) (phases and gates) and the
 - [ ] P5.4 Tier-3 pattern extractors: copular definitions, Hearst patterns, date/quantity normalizers
 - [ ] P5.5 Extractor conformance suite: per-pattern corpus with expected grains; extractor version recorded in provenance
 - [ ] P5.6 Recall-by-toolchain drill: break an extractor, enumerate and re-verify everything it produced (REQ-15)
-- [ ] P5.7 ⛩ **Phase 5 gate** (human): real source → snapshot → candidates → verified grains → provable answers, fully traced; REQ-15 green
+- [ ] P5.7 ⛩ **Phase 5 gate** (human): real source → snapshot → candidates → verified grains → provable answers, fully traced; REQ-15 green — *also requires P5.8–P5.9 below (added pre-freeze 2026-07-04, after this gate item was numbered)*
+- [ ] P5.8 Rendition/converter framework: deterministic converters (CSV, XLSX→TSV, JSON, HTML, born-digital PDF), hashed rebuildable renditions, trusted/untrusted flag, rendition field in provenance ([file-intake.md](docs/Architecture/file-intake.md))
+- [ ] P5.9 Intake CLI: `ingest <file|url>` → archived snapshot, renditions run, quarantine report
 
 ## Phase 6 — Scale and hardening
 
