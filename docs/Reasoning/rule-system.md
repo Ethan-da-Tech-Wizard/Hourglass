@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: rule-system.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Defines the declarative rule evaluation engine, unification algorithms, and forward-chaining mechanics.
+============================================================================== -->
+
 # Rule system
 
 **Problem:** storing every derivable fact explicitly (`Dog has lungs`, `Cat has lungs`, `Horse

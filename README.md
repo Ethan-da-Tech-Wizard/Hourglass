@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Root entry point and architectural summary for the Hourglass evidence-based reasoning engine notebook.
+============================================================================== -->
+
 # Hourglass
 
 An engineering notebook for evidence-based reasoning: acquisition, verification, knowledge grains, proof chains, and answer rendering.

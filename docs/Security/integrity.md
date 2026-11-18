@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: integrity.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Security threat modeling, cryptographically signed assertions, zero-trust input validation, and tamper resistance.
+============================================================================== -->
+
 # Security: integrity, tamper detection, and knowledge injection
 
 **Problem:** a reasoning engine whose authority is "every answer is proven" concentrates risk in

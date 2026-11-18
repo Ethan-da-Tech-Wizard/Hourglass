@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Index and overview of all Architectural Decision Records guiding the design and implementation of the Hourglass engine.
+============================================================================== -->
+
 # Architectural Decision Records
 
 Every significant engineering choice is recorded here: the problem, the options considered, the

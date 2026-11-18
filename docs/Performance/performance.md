@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: performance.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Latency targets, throughput budgets, index scaling benchmarks, and memory optimization guidelines.
+============================================================================== -->
+
 # Performance
 
 **Problem:** determinism and provenance are non-negotiable; speed must be found *within* those

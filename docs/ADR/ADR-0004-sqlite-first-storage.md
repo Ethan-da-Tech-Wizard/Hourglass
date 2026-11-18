@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0004-sqlite-first-storage.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0004: Selects SQLite as the primary embedded relational and vector backing store for local-first execution.
+============================================================================== -->
+
 # ADR-0004: SQLite + content-addressed archive as the initial storage engine
 
 - **Status:** Accepted

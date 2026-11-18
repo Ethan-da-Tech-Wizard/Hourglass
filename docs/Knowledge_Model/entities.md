@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: entities.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Data structures and identity resolution schemas for knowledge graph entities, aliases, and lifecycle management.
+============================================================================== -->
+
 # Entities and entity resolution
 
 **Problem:** the same real-world object appears under many names ("Earth", "the Earth", "our

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0000-template.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Standardized Architectural Decision Record (ADR) template establishing context, options considered, consequences, and decisions.
+============================================================================== -->
+
 # ADR-NNNN: <decision, stated as a fact>
 
 - **Status:** Proposed | Accepted | Superseded by ADR-MMMM

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: grain-serialization.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Serialization standards (JSON-LD / Binary) for encoding atomic knowledge grains with canonical hashing.
+============================================================================== -->
+
 # Grain serialization and identity — normative
 
 **Problem this spec fixes:** grain ids are content hashes

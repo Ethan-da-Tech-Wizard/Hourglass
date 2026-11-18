@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: provenance.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Cryptographic hashing, source attribution, transformation logging, and tamper-evident provenance modeling.
+============================================================================== -->
+
 # Provenance and source tracking
 
 **Problem:** a proof chain bottoms out in grains; grains must bottom out in something outside the

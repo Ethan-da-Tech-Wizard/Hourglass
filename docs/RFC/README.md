@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Overview and repository index for Request for Comments (RFC) proposals extending system capabilities.
+============================================================================== -->
+
 # RFC process
 
 An RFC (request for comments) is a **proposal under discussion** — used when a change needs

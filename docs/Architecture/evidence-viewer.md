@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: evidence-viewer.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Specifications for interactive UI components visualizing proof trees, evidence citations, and confidence scores.
+============================================================================== -->
+
 # Evidence viewer: showing the user where information came from
 
 **Problem:** provenance exists as data — every grain carries source ids, excerpts, and offsets

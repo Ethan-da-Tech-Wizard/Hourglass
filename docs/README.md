@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Central index and documentation topology mapping all research specifications, ADRs, and technical blueprints.
+============================================================================== -->
+
 # Hourglass documentation map
 
 This repository is the engineering notebook for Hourglass. Every document exists to answer a real

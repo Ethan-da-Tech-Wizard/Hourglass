@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: unknown-handling.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Defines epistemological handling of partial knowledge, open-world assumptions, and missing premise reporting.
+============================================================================== -->
+
 # Unknown handling
 
 **Problem:** most question-answering systems are built to always produce an answer; their

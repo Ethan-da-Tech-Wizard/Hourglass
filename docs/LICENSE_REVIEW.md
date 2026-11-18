@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: LICENSE_REVIEW.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Compliance audit reviewing intellectual property, open-source licenses, and terms for incorporated components.
+============================================================================== -->
+
 # License review — Hourglass
 
 Reviewed 2026-10-12. Original project code retains **MIT** terms in [LICENSE](../LICENSE).

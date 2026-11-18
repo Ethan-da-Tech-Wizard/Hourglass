@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: requirements-traceability.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Traceability matrix connecting high-level functional requirements to architecture components and tests.
+============================================================================== -->
+
 # Requirements traceability matrix
 
 **Problem this spec fixes:** "all requirements work together" is only checkable if every

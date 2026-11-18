@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0002-closed-relationship-vocabulary.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0002: Mandates a strictly typed, closed vocabulary for relationship predicates to maintain rigorous semantic tractability.
+============================================================================== -->
+
 # ADR-0002: The canonical relationship vocabulary is closed, extended only by RFC
 
 - **Status:** Accepted

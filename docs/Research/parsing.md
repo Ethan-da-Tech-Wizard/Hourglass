@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: parsing.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Comparative evaluation of document parsing strategies, AST extractors, and multi-format chunking algorithms.
+============================================================================== -->
+
 # Parsing: from sources to candidate grains
 
 **Problem:** knowledge arrives as documents, tables, and records; Hourglass consumes canonical

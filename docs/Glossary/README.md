@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Defines authoritative terminology, mathematical notations, and formal definitions used across the reasoning engine.
+============================================================================== -->
+
 # Glossary
 
 The single source of truth for Hourglass terminology. Every other document uses these terms

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0006-entity-merge-supersession.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0006: Defines entity resolution semantics, conflict arbitration, and immutable historical supersession chains.
+============================================================================== -->
+
 # ADR-0006: Entity merges supersede grains; no stored record is ever modified in place
 
 - **Status:** Accepted

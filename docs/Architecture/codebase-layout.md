@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: codebase-layout.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Defines target directory hierarchy, modular boundaries, package responsibilities, and compilation units.
+============================================================================== -->
+
 # Codebase layout — the visual architecture
 
 **Problem:** "all codebases line up" needs a picture before the first file exists: which modules

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: proof-engine.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Formal deductive inference engine constructing verifiable proof trees, justification paths, and lemma chains.
+============================================================================== -->
+
 # Proof engine
 
 **Problem:** given a question (a goal pattern) and a knowledge graph of grains and rules, find a

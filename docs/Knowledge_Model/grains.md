@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: grains.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Core specification for atomic knowledge grains, including payload schemas, temporal bounds, and validity scopes.
+============================================================================== -->
+
 # Grains: the atomic unit of knowledge
 
 **Problem:** we need a unit of knowledge that is (a) small enough to deduplicate and reason over

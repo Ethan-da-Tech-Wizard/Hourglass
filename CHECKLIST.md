@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: CHECKLIST.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Serves as the master progression checklist tracking implementation phases, verification milestones, and component maturity.
+============================================================================== -->
+
 # Hourglass Master Progression Checklist
 
 This is the single authoritative TODO list for the project. Every working session — human or

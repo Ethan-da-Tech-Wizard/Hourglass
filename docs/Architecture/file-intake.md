@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: file-intake.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Architectural pipeline for parsing, chunking, extracting assertions, and hashing raw source artifacts into knowledge grains.
+============================================================================== -->
+
 # File intake: where uploaded information sits
 
 **Problem:** knowledge arrives as files — PDFs, spreadsheets, CSVs, HTML, JSON exports, images,

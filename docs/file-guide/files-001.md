@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: files-001.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Detailed inventory breakdown detailing status, line counts, and checksum validations for repository files.
+============================================================================== -->
+
 # Files 1 of 1 — Hourglass
 
 [All pages](../FILE_GUIDE.md) · [Project guide](../PROJECT_GUIDE.md)

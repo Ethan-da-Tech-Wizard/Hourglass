@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0001-atomic-grains.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0001: Formalizes atomic knowledge grains as the fundamental immutable information unit with cryptographic provenance.
+============================================================================== -->
+
 # ADR-0001: Knowledge is stored as atomic grains (triples + qualifiers), immutable except status
 
 - **Status:** Accepted

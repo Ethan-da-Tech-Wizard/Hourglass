@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: storage-interface.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Abstract interface definition and persistence contracts for grain repositories, indices, and vector caches.
+============================================================================== -->
+
 # Storage interface — normative
 
 **Problem this spec fixes:** "all codebases line up" is achieved by making every subsystem meet

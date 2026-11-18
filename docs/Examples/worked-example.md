@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: worked-example.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Step-by-step walkthrough demonstrating intake, fact extraction, proof graph synthesis, and verified answer emission.
+============================================================================== -->
+
 # Worked example: the whole pipeline on a small knowledge base
 
 **Purpose:** make every abstraction in the design concrete on one tiny KB — ingestion,

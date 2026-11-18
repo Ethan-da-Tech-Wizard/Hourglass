@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: storage-research.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Benchmarking and evaluation of embedded database engines (SQLite, DuckDB, LMDB) for grain and edge storage.
+============================================================================== -->
+
 # Storage research
 
 **Problem:** choose where grains, entities, rules, sources, and proof caches live. The choice

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: CLAUDE.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Provides operational instructions, architectural guidelines, development rules, and coding standards for contributor agents.
+============================================================================== -->
+
 # Working rules for agents on the Hourglass project
 
 Hourglass is a deterministic knowledge reasoning engine: nothing may be stated unless provable

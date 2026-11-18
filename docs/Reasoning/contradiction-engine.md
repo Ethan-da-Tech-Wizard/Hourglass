@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: contradiction-engine.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Logic engine specification for detecting dialectical contradictions, temporal conflicts, and source divergence.
+============================================================================== -->
+
 # Contradiction engine
 
 **Problem:** independent sources disagree — because one is wrong, outdated, less precise, or

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: RFC-0000-template.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Standardized template for authoring and evaluating Request for Comments (RFC) engineering proposals.
+============================================================================== -->
+
 # RFC-NNNN: <short imperative title>
 
 - **Status:** Draft | Accepted | Rejected | Withdrawn

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: overview.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Comprehensive systems architecture diagram and end-to-end dataflow specification for the Hourglass platform.
+============================================================================== -->
+
 # Architecture overview
 
 **Problem:** we need a system that answers questions only when the answer is derivable from

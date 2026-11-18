@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: PROJECT_NOTES.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Preserves core architecture blueprints, design rationale, data schemas, and pipeline specifications from foundational research.
+============================================================================== -->
+
 # Hourglass
 
 **A deterministic knowledge reasoning engine. Truth through proof, not statistical prediction.**

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: rule-syntax.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Formal EBNF grammar and concrete syntax specification for declarative reasoning rules.
+============================================================================== -->
+
 # Rule syntax — normative
 
 **Problem this spec fixes:** rules are authored by humans, hashed for identity, matched by the

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0003-unknown-over-guessing.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0003: Establishes explicit unknown state propagation over probabilistic guessing during proof construction.
+============================================================================== -->
+
 # ADR-0003: No confidence scores in the answer path; refusal is a correct output
 
 - **Status:** Accepted

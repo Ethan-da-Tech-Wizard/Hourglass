@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: canonical-relationships.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Formal ontology defining supported predicates, inverse relationships, cardinality constraints, and transitive semantics.
+============================================================================== -->
+
 # Canonical relationships
 
 **Problem:** natural language expresses the same connection in dozens of ways ("created",

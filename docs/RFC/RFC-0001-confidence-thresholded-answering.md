@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: RFC-0001-confidence-thresholded-answering.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: RFC 0001: Formulates mathematical confidence scoring, uncertainty propagation, and thresholded response gates.
+============================================================================== -->
+
 # RFC-0001: Confidence-thresholded answering
 
 - **Status:** Rejected

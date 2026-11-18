@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: roadmap.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Strategic execution roadmap detailing phased releases from standalone grain store to distributed proof synthesizer.
+============================================================================== -->
+
 # Roadmap
 
 Documentation precedes implementation — that is a directive, not a preference. Each phase has an

@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: prior-art.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Survey of existing knowledge representation systems, theorem provers, semantic web ontologies, and RAG architectures.
+============================================================================== -->
+
 # Prior art survey
 
 **Problem:** almost every subsystem Hourglass needs has decades of research behind it under a

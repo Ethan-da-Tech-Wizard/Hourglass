@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: ADR-0005-datalog-style-rules.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: ADR 0005: Adopts Datalog-inspired declarative inference rules to guarantee termination and monotonic forward chaining.
+============================================================================== -->
+
 # ADR-0005: The rule language is Datalog — no function symbols, no negation, range-restricted
 
 - **Status:** Accepted

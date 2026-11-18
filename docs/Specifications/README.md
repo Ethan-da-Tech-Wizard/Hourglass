@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: README.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Index of authoritative functional and technical specifications governing data interchange and API contracts.
+============================================================================== -->
+
 # Specifications
 
 Everything else in `docs/` is **explanatory** — it tells you why the design is what it is. The

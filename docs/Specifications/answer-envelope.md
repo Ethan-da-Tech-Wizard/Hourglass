@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: answer-envelope.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: JSON/schema contract specifying the verified answer structure, proof tree payload, and uncertainty metrics.
+============================================================================== -->
+
 # Answer envelope — normative
 
 **Problem this spec fixes:** "every answer is proven or a classified refusal" must be a *shape*,

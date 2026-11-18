@@ -1,3 +1,10 @@
+<!-- ==============================================================================
+# Program: v1-scope.md
+# Programmer: Ethan-da-Tech-Wizard
+# Last Modified: November 18, 2026
+# Purpose: Defines exact boundary constraints, feature inclusions, and deferred capabilities for the initial v1.0 release.
+============================================================================== -->
+
 # v1 scope — frozen
 
 **Purpose:** make "no new features once code begins" an enforceable rule instead of a hope.
